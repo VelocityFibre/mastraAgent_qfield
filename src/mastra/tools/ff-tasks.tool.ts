@@ -16,6 +16,13 @@ const getDatabaseUrl = () => {
 const getSQL = () => {
   const url = getDatabaseUrl();
   if (!url) return null;
+
+  // Only use neon for PostgreSQL URLs
+  if (!url.startsWith('postgresql://') && !url.startsWith('postgres://')) {
+    console.warn('ff-tasks tools require PostgreSQL connection (POSTGRES_URL)');
+    return null;
+  }
+
   return neon(url);
 };
 
