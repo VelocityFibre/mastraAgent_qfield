@@ -1,0 +1,7 @@
+node_modules
+.git
+.env
+*.log
+.mastra
+mastra.db
+qfield-meeting-notes.md
