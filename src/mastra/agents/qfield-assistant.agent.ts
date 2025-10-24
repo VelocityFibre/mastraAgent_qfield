@@ -221,7 +221,7 @@ Remember: You're supporting geospatial professionals. Be technical, be precise, 
 export const qfieldAssistantAgent = new Agent({
   name: "qfield-assistant",
   instructions: QFIELD_ASSISTANT_INSTRUCTIONS,
-  model: "openai/gpt-4o",
+  model: "xai/grok-4-latest",
 
   memory: new Memory({
     storage: new LibSQLStore({
